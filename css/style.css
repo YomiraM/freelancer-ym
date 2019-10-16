@@ -1,0 +1,232 @@
+:root {
+    --primario: #ffcc66; 
+    --secundario: #FC7C69;    
+    --oscuro: #212121;
+    --gris: #757575;
+}
+
+html {
+    box-sizing: border-box;
+    min-height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+p {
+    line-height: 2;
+}
+
+body {
+    font-family: 'Krub', sans-serif;
+    min-height: 100%;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+h3 {
+    color: var(--secundario);
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.contenedor {
+    max-width: var(--anchopantalla);
+    margin: 0 3rem 3rem 3rem;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 3rem;
+    border-radius: 10px; 
+    -webkit-box-shadow: 4px 5px 7px -5px rgba(0,0,0,0.6);
+    -moz-box-shadow: 4px 5px 7px -5px rgba(0,0,0,0.6);
+    box-shadow: 4px 5px 7px -5px rgba(0,0,0,0.6);
+}
+
+.site-header nav {
+    padding: 1rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .site-header nav {
+    flex-direction: row;
+    justify-content: space-between;
+    }
+ }
+
+.site-header nav a {
+    color: var(--oscuro);
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.site-header nav a:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .site-header nav a {
+        margin-bottom: 0;
+    }
+}
+
+.hero {
+    height: 450px;
+    background-image: url(../img/hero.jpg);
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::after {
+    content: '';
+    background-color: rgba(0,0,0,.9);
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.contenedor-hero {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    padding-bottom: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.contenedor-hero i {
+    font-size: 3rem;
+    color: var(--primario);
+}
+
+.boton {
+    background-color: var(--secundario);
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: .5rem;
+    color: var(--blanco);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border:none;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+/*.servicios 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}*/
+@media (min-width: 768px) {
+    .contenedor-servicios {
+        display: flex;
+        justify-content: space-between;
+    } 
+
+    .servicio {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconos {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--primario);
+    border-radius: 50%;
+}
+
+.iconos i {
+    font-size: 2rem;
+    color: var(--oscuro);
+}
+
+form {
+    background-color: var(--gris);
+    padding: 2rem;
+    border-radius: 10px;
+}
+form legend {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--primario);
+    margin-bottom: 2rem;
+    
+}
+@media (min-width:768px) {
+    form {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .contenedor-campos {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .campo {
+        flex : 0 0 calc(50% - 1rem);
+    }
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.campo label {
+    flex: 0 0 90px;
+    color: var(--blanco);
+}
+
+.campo input[type="email"] {
+    flex: 2;
+    height: 2rem;
+}
+
+.campo input[type="text"],
+.campo input[type="tel"] {
+    flex: 1;
+    height: 2rem;
+}
+
+.w-100{
+    flex: 0 0 100%;
+} 
+
+.campo textarea {
+    flex: 1;
+    height: 4rem;
+} 
+
+.enviar {
+    display: flex;
+    justify-content: flex-end;
+}
+
